@@ -1,124 +1,214 @@
 <html>
+
 <head>
   <title>Mein Restaurant</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    .myBody{
+    .myBody {
       margin: 0px;
     }
-    .atf-image{
+
+    .atf-image {
       width: 100%;
       height: 500px;
       object-fit: cover;
     }
-    .pacifico{
+
+    .pacifico {
       font-family: 'Pacifico', cursive;
       color: blue;
     }
 
+    .footer-link {
+      color: white;
+    }
 
-    .main-container{
-      padding-left: 100px;
+
+    .main-container {
       background-color: rgba(0, 0, 0, 0.1);
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       height: 500px;
-      color: blue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .container{
+    .menu {
+      position: absolute;
+      top: 32px;
+      right: 100px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 32px;
+      filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.5));
+    }
+
+    .menu a:hover {
+      color: #EDBB0A;
+    }
+
+    .container {
       padding-left: 100px;
       padding-right: 100px;
+      margin-bottom: 64px;
     }
 
-    .googlemaps{
+    .footer {
+      background: rgb(35, 38, 41);
+      color: white;
+      padding: 100px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+      color: orange;
+    }
+
+    .googlemaps {
       height: 350px;
       width: 100%;
     }
 
+    .headline {
+      color: #EDBB0A;
+      font-size: 54px;
+      filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.5));
+    }
 
+    .oder-btn {
+      color: black !important;
+      background-color: #EDBB0A;
+      padding: 16px;
+    }
+
+    .order-btn:hover {
+      background-color: #e8c755;
+    }
+
+    a {
+      color: #EDBB0A;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
 
 <body class="myBody">
 
-<img class="atf-image" src="./img/aot.jpg">
+  <img class="atf-image" src="./img/aot.jpg">
 
-<div class="main-container">
-<h1>Herzlich Willkommen</h1>
-Hier findest du einen Überblick über unsere Speien
-</div>
+  <div class="main-container">
+    <h1 class="headline">Herzlich Willkommen</h1>
+    Hier findest du einen Überblick über unsere Speien
+  </div>
 
-<div class="container">
-<h2 class="Pacifico">Unsere Öffnungszeiten</h2>
-<table>
-  <tr>
-    <td>Mo - Fr:</td>
-    <td>12:00 - 23:00</td>
-  </tr>
-  <tr>
-    <td>Sa:</td>
-    <td>11:00 - 23:00</td>
-  </tr>
-  <tr>
-    <td>So:</td>
-    <td>11:00 - 23:00</td>
-  </tr>
-</table>
-</div>
+  <div class="menu">
+    <a href="#contact">RESERVIEREN</a>
+    <a class="oder-btn" href="#">BESTELL ONLINE</a>
+    <a href="#contact">KONTAKT</a>
+    <a href="#adress">ANFAHRT</a>
 
-<div class="container">
-<h2 class="Pacifico">Anfahrt</h2>
-Unsere Adresse lautet: Würmthaler straße 113, 81375 München<br>
+  </div>
+  <div class="container">
+    <h2 class="Pacifico">Unsere Öffnungszeiten</h2>
+    <table>
+      <tr>
+        <td>Mo - Fr:</td>
+        <td>12:00 - 23:00</td>
+      </tr>
+      <tr>
+        <td>Sa:</td>
+        <td>11:00 - 23:00</td>
+      </tr>
+      <tr>
+        <td>So:</td>
+        <td>11:00 - 23:00</td>
+      </tr>
+    </table>
+  </div>
 
-<iframe class="googlemaps"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5327.494515200048!2d11.47458659216899!3d48.115111078580156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd85a10a5afd5%3A0x139813b021e0ae10!2zV8O8cm10YWxzdHJhw59lIDExMywgODEzNzUgTcO8bmNoZW4!5e0!3m2!1sde!2sde!4v1751909109315!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+  <div class="container" id="contact">
+    <h2 class="Pacifico" id="adress">Anfahrt</h2>
+    Unsere Adresse lautet: Würmthaler straße 113, 81375 München<br>
 
-<div class="container">
-<h2 class="Pacifico">Tageskarte</h2>
- <table>
-   <tr>
-    <td>1</td>
-    <td>Pizza</td>
-    <td>8,99</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Paste</td>
-    <td>9,99</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Gem. Salat</td>
-    <td>7,99</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Zitronensorbet</td>
-    <td>5,99</td>
-  </tr>
+    <iframe class="googlemaps"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5327.494515200048!2d11.47458659216899!3d48.115111078580156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd85a10a5afd5%3A0x139813b021e0ae10!2zV8O8cm10YWxzdHJhw59lIDExMywgODEzNzUgTcO8bmNoZW4!5e0!3m2!1sde!2sde!4v1751909109315!5m2!1sde!2sde"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 
- </table>
- Jetzt die Tageskarte <a href="./downloads/tageskarte.pdf" target="_blank">herunterladen</a>
-</div>
+  <div class="container">
+    <h2 class="Pacifico">Tageskarte</h2>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>Pizza</td>
+        <td>8,99</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paste</td>
+        <td>9,99</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Gem. Salat</td>
+        <td>7,99</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Zitronensorbet</td>
+        <td>5,99</td>
+      </tr>
 
-<div class="container">
- <h2 class="Pacifico">Kontakt</h2>
- So kannst du uns kontaktieren: <br>
- telefon: <a href="tel:015857520956">015857520956</a> <br>
- E-Mail: <a href="mailto:info@haderner.de">info@haderner.de</a> <br>
-</div>
-<br>
+    </table>
+    Jetzt die Tageskarte <a href="./downloads/tageskarte.pdf" target="_blank">herunterladen</a>
+  </div>
 
-<div class="container">
-  (c) Copyrihgt 2023 Developer Akademie GmbH<br>
-  <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-</div>
+  <div class="container" id="contact">
+    <h2 class="Pacifico">Kontakt</h2>
+    So kannst du uns kontaktieren: <br>
+    telefon: <a href="tel:015857520956">015857520956</a> <br>
+    E-Mail: <a href="mailto:info@haderner.de">info@haderner.de</a> <br>
+  </div>
+  <br>
+
+  <div class="container footer">
+    <div>
+      (c) Copyrihgt 2023 Developer Akademie GmbH<br>
+    </div>
+    <div>
+      <a href="impressum.html" class="footer-link">Impressum</a> | <a href="datenschutz.html"
+        class="footer-link">Datenschutz</a>
+    </div>
+  </div>
 
 </body>
+
 </html>
